@@ -15,7 +15,7 @@ const Channel: React.FC<ChannelProps> = ({ user, db }) => {
 
   const { uid, displayName, photoURL } = user;
 
-  const taregetCollectionName  = "messages-test";
+  const taregetCollectionName = "messages-test";
 
   useEffect(() => {
     if (db) {
