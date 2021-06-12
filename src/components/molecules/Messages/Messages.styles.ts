@@ -18,6 +18,7 @@ export const useStyles = makeStyles(theme =>
     date: {
       display: "flex",
       alignItems: "center",
+      width: "calc(100% - 45px - 16px)",
       height: 30,
       marginBottom: 8,
     },
