@@ -53,11 +53,16 @@ const Messages: React.FC<MessagesProps> = ({ messages, user }) => {
 
             <Typography
               variant="caption"
-              color="secondary"
+              color="textSecondary"
               className={classes.date}
               style={{
+                width:
+                  user.uid === message.uid
+                    ? "calc(100% - 45px - 16px)"
+                    : "calc(100% - 45px - 16px)",
                 justifyContent:
-                  user.uid === message.uid ? "flex-start" : "flex-end",
+                  user.uid === message.uid ? "flex-end" : "flex-start",
+                margin: user.uid === message.uid ? 0 : "0 0 0 auto",
               }}
             >
               {message.createdAt?.seconds ? (
