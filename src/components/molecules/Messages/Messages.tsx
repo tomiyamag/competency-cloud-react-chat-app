@@ -3,6 +3,7 @@ import { Box, Avatar, Typography } from "@material-ui/core";
 import NewLineToBreak from "../../atoms/NewLineToBreak/NewLineToBreak";
 import { useStyles } from "./Messages.styles";
 import { formatRelative } from "date-fns";
+import ja from "date-fns/locale/ja";
 
 interface MessagesProps {
   messages: any;
@@ -65,7 +66,8 @@ const Messages: React.FC<MessagesProps> = ({ messages, user }) => {
                 <>
                   {formatRelative(
                     new Date(message.createdAt.seconds * 1000),
-                    new Date()
+                    new Date(),
+                    { locale: ja }
                   )}
                 </>
               ) : (
